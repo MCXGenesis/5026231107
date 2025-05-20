@@ -1,0 +1,36 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: bisque;
+    color: rgb(11, 63, 116);
+    margin-left: 250px;
+    margin-right: 150px;
+}
+
+p {
+    text-decoration: solid;
+}
+
+a:link {
+    color: rgb(11, 63, 116);
+}
+
+a:visited {
+    color: rgb(11, 63, 116);
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: solid;
+    font-weight: bold;
+}
+
+.kalimatpembuka{
+    font-size: large;
+    border: chocolate;
+    border-radius: 50px;
+}
+
+.flex-container {
+    display: flex;
+}

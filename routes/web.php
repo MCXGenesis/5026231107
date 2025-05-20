@@ -17,8 +17,44 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('bootstrap1', function () {
+    return view('bootstrap1');
+});
+
+Route::get('bootstrap2', function () {
+    return view('bootstrap2');
+});
+
+Route::get('js1', function () {
+    return view('js1');
+});
+
+Route::get('js2', function () {
+    return view('js2');
+});
+
 Route::get('/blog', function () {
     return view('blog');
+});
+
+Route::get('/pertama', function(){
+    return view('pertama');
+});
+
+Route::get('/linktree', function(){
+    return view('linktree');
+});
+
+Route::get('/page', function() {
+    return view('page');
+});
+
+Route::get('/index', function(){
+    return view('index');
+});
+
+Route::get('/landtest', function(){
+    return view('landtest');
 });
 
 Route::get('/halo', function () {
