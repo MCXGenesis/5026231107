@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TryController ;
+use App\Http\Controllers\PegawaiController ;
+use App\Http\Controllers\BlogController ;
+use App\Http\Controllers\PegawaiDBController ;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,4 +66,28 @@ Route::get('/halo', function () {
     return "<h1> Lokasi baru: banyumuani</h1>";
 });
 
-Route::get('hello', [TryController::class, 'helloWorld']);
+Route::get('dosen', [TryController::class, 'biodata']);
+
+//route pegawai
+// Route::get('pegawai/{nama}', [PegawaiController::class, 'index']);
+
+//route formulir
+Route::get('/formulir', [PegawaiController::class, 'formulir']);
+Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
+
+// route blog
+Route::get('/blog', [BlogController::class,'home']);
+Route::get('/blog/tentang', [BlogController::class,'tentang']);
+Route::get('/blog/kontak', [BlogController::class,'kontak']);
+
+//Route PegawaiDBController
+//read
+Route::get('/pegawai',[PegawaiDBController::class,'indexpegawai']);
+//create
+Route::get('/pegawai/tambah',[PegawaiDBController::class, 'tambah']);
+Route::post('/pegawai/store', [PegawaiDBController::class, 'store']);
+//update
+Route::get('/pegawai/edit/{id}',[PegawaiDBController::class,'edit']);
+Route::post('/pegawai/update',[PegawaiDBController::class, 'update']);
+//delete
+Route::get('/pegawai/hapus/{id}',[PegawaiDBController::class, 'hapus']);
