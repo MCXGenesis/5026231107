@@ -91,3 +91,7 @@ Route::get('/pegawai/edit/{id}',[PegawaiDBController::class,'edit']);
 Route::post('/pegawai/update',[PegawaiDBController::class, 'update']);
 //delete
 Route::get('/pegawai/hapus/{id}',[PegawaiDBController::class, 'hapus']);
+
+//crud ahh
+Route::get('/pegawai',[PegawaiDBController::class,'indexpegawai']);
+Route::get('pegawai/cari', [PegawaiDBController::class, 'cari']);
