@@ -8,7 +8,7 @@ class PegawaiDBController extends Controller
 {
     //
     public function indexpegawai(){
-// mengambil data dari table pegawai, get and paginate cant work together
+// mengambil data dari table pegawai, get and paginate cant work together`
     	// $pegawai = DB::table('pegawai')->get();
         $pegawai = DB::table('pegawai')->paginate(10);
 

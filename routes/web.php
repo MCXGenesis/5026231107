@@ -5,6 +5,7 @@ use App\Http\Controllers\TryController ;
 use App\Http\Controllers\PegawaiController ;
 use App\Http\Controllers\BlogController ;
 use App\Http\Controllers\PegawaiDBController ;
+use App\Http\Controllers\sepedamotorDBCont ;
 use Illuminate\Support\Facades\DB;
 
 /*
@@ -95,3 +96,17 @@ Route::get('/pegawai/hapus/{id}',[PegawaiDBController::class, 'hapus']);
 //crud ahh
 Route::get('/pegawai',[PegawaiDBController::class,'indexpegawai']);
 Route::get('pegawai/cari', [PegawaiDBController::class, 'cari']);
+
+
+// Router sepedamotorDBCont
+Route::get('/sepedamotor',[sepedamotorDBCont::class,'indexsepedamotor']);
+// Create
+Route::get('/sepedamotor/tambahmotor',[sepedamotorDBCont::class,'tambah']);
+Route::post('/sepedamotor/store',[sepedamotorDBCont::class,'store']);
+// Update
+Route::get('/sepedamotor/edit/{id}',[sepedamotorDBCont::class,'edit']);
+Route::post('/sepedamotor/update',[sepedamotorDBCont::class,'update']);
+// Delete
+Route::get('/sepedamotor/hapus/{id}',[sepedamotorDBContr::class, 'hapus']);
+// Read
+Route::get('/sepedamotor/cari', [sepedamotorDBCont::class, 'cari']);
