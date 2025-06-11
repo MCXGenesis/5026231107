@@ -17,4 +17,7 @@ public function show()
         // view
         return view('pagecounter', ['jumlah' => $jumlah]);
     }
+
 }
+
+#un
