@@ -6,6 +6,8 @@ use App\Http\Controllers\PegawaiController ;
 use App\Http\Controllers\BlogController ;
 use App\Http\Controllers\PegawaiDBController ;
 use App\Http\Controllers\sepedamotorDBCont ;
+use App\Http\Controllers\pagecounterController ;
+use App\Http\Controllers\keranjangbelanjaController ;
 use Illuminate\Support\Facades\DB;
 
 /*
@@ -110,3 +112,13 @@ Route::post('/sepedamotor/update',[sepedamotorDBCont::class,'update']);
 Route::get('/sepedamotor/hapus/{id}',[sepedamotorDBCont::class, 'hapus']);
 // Read
 Route::get('/sepedamotor/cari', [sepedamotorDBCont::class, 'cari']);
+
+
+// Router pagecounter
+Route::get('/pagecounter', [pagecounterController::class, 'show']);
+
+//crud keranjang belanja
+Route::get('/keranjangbelanja', [KeranjangBelanjaController::class, 'index']);
+Route::get('/keranjangbelanja/beli', [KeranjangBelanjaController::class, 'beli']);
+Route::post('/keranjangbelanja/store', [KeranjangBelanjaController::class, 'store']);
+Route::get('/keranjangbelanja/hapus/{ID}', [KeranjangBelanjaController::class, 'hapus']);
