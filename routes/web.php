@@ -107,6 +107,6 @@ Route::post('/sepedamotor/store',[sepedamotorDBCont::class,'store']);
 Route::get('/sepedamotor/edit/{id}',[sepedamotorDBCont::class,'edit']);
 Route::post('/sepedamotor/update',[sepedamotorDBCont::class,'update']);
 // Delete
-Route::get('/sepedamotor/hapus/{id}',[sepedamotorDBContr::class, 'hapus']);
+Route::get('/sepedamotor/hapus/{id}',[sepedamotorDBCont::class, 'hapus']);
 // Read
 Route::get('/sepedamotor/cari', [sepedamotorDBCont::class, 'cari']);
