@@ -117,8 +117,17 @@ Route::get('/sepedamotor/cari', [sepedamotorDBCont::class, 'cari']);
 // Router pagecounter
 Route::get('/pagecounter', [pagecounterController::class, 'show']);
 
-//crud keranjang belanja
+// Route keranjangbelanja
 Route::get('/keranjangbelanja', [KeranjangBelanjaController::class, 'index']);
 Route::get('/keranjangbelanja/beli', [KeranjangBelanjaController::class, 'beli']);
 Route::post('/keranjangbelanja/store', [KeranjangBelanjaController::class, 'store']);
 Route::get('/keranjangbelanja/hapus/{ID}', [KeranjangBelanjaController::class, 'hapus']);
+
+// Route karyawan
+# Week 15
+Route::get('/karyawan', [karyawanController::class, 'index']);
+Route::get('/karyawan/tambah', [karyawanController::class, 'tambah']);
+Route::post('/karyawan/store', [karyawanController::class, 'store']);
+Route::get('/karyawan/edit/{kp}', [karyawanController::class, 'edit']);
+Route::post('/karyawan/update', [karyawanController::class, 'update']);
+Route::get('/karyawan/hapus/{kp}', [karyawanController::class, 'hapus']);
