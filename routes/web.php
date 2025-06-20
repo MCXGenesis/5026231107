@@ -8,6 +8,8 @@ use App\Http\Controllers\PegawaiDBController ;
 use App\Http\Controllers\sepedamotorDBCont ;
 use App\Http\Controllers\pagecounterController ;
 use App\Http\Controllers\keranjangbelanjaController ;
+use App\Http\Controllers\counterController ;
+use App\Http\Controllers\newkaryawanController ;
 use Illuminate\Support\Facades\DB;
 
 /*
@@ -131,3 +133,23 @@ Route::post('/karyawan/store', [karyawanController::class, 'store']);
 Route::get('/karyawan/edit/{kp}', [karyawanController::class, 'edit']);
 Route::post('/karyawan/update', [karyawanController::class, 'update']);
 Route::get('/karyawan/hapus/{kp}', [karyawanController::class, 'hapus']);
+
+// Route counter latihan
+Route::get('/counter',[counterController::class, 'counter']);
+
+// Route mhs latihan
+Route::get('/mhs',[mhs::class, 'index']);
+Route::get('/mhs/tambah', [mhs::class, 'tambah']);
+Route::post('/mhs/store', [mhs::class, 'store']);
+Route::get('/mhs/edit/{kp}', [mhs::class, 'edit']);
+Route::post('/mhs/update', [mhs::class, 'update']);
+Route::get('/mhs/hapus/{kp}', [mhs::class, 'hapus']);
+
+
+// ROUTE EAS
+Route::get('/eas',[newkaryawanController::class, 'index']);
+Route::get('/eas/tambah', [newkaryawanController::class, 'tambah']);
+Route::post('/eas/store', [newkaryawanController::class, 'store']);
+// Route::get('/eas/edit/{kp}', [mhs::class, 'edit']);
+// Route::post('/eas/update', [mhs::class, 'update']);
+Route::get('/eas/hapus/{nk}', [newkaryawanController::class, 'hapus']);
